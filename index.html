@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="LOGO.png" class="logo">
+            <ul>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Daisylyn</span><br> Espiritu from Philippines</h1>
+        </div>
+    </div>
+</div>   
+<!--------about--------->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="daisy.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>As a passionate graphic designer and web developer, I blend creativity with technical expertise to craft visually engaging and functional digital experiences. With a keen eye for design and a strong foundation in web development, I specialize in creating stunning websites that are not only aesthetically pleasing but also user-friendly and responsive. I thrive on transforming ideas into compelling designs and seamless online solutions, delivering high-quality work that aligns with client goals and enhances user interaction.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br> Skilled in designing intuitive user interfaces and enhancing user experiences through wireframing, prototyping, and testing, ensuring websites are both visually engaging and easy to navigate.</li>
+                        <li><span>Web Development</span><br>Proficient in HTML, CSS, JavaScript, and responsive design, ensuring websites are both functional and accessible across all devices.</li>
+                        <li><span>Graphic Design</span><br>Expertise in creating visually appealing designs using tools like Adobe Photoshop, Illustrator, and InDesign, with a strong understanding of color theory, typography, and layout principles.</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="experience">
+                    <ul>
+                        <li><span>UX/UI Optimization</span><br>Conducted user research and usability testing to enhance website interfaces, improving both aesthetics and functionality while ensuring an intuitive, user-centered design.</li>
+                        <li><span>Branding & Design</span><br>Developed visual identities and branding materials for businesses, including logos, brochures, and marketing collateral, ensuring a cohesive and impactful brand presence.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+    
+    function opentab(tabname){
+        for(tablinks of tablinks){
+            tablinks.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontent){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-------Contact---------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-thin fa-paper-plane-top"></i>daisylynmonsanto@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0966734092</p>
+                <div class="social icons">
+                    <a href="https://facebook.com"><i class=" fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button> 
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
